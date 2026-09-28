@@ -2,9 +2,9 @@
 
 <p align="center"><img src="brand/logo-wordmark.svg#gh-light-mode-only" width="220" alt="Ralio"><img src="brand/logo-wordmark-dark.svg#gh-dark-mode-only" width="220" alt="Ralio"></p>
 
-Hitting-partner matchmaking for tennis clubs. Live at [app.ralio.dk](https://app.ralio.dk) since 2 August 2026, with a native iOS app on TestFlight since 11 August.
+Hitting-partner matchmaking for tennis clubs. It ran in production for a pilot club from 2 August 2026, with a native iOS app on TestFlight from 11 August. The hosting has since been switched off, so the screenshots below come from a local run with test data.
 
-This repository is the public walkthrough. The product code is private because it runs a live service with real members in it, and I would rather not publish the operational half. If you want to read the code, ask, and I will give you access. Three of the modules are excerpted here as they are in production, tests included.
+This repository is the public walkthrough. The product code is private because it held real members' data and I would rather not publish the operational half (runbook, hosting, secrets handling). If you want to read the code, ask, and I will give you access. Three of the modules are excerpted here as they are in production, tests included.
 
 ## The problem
 
@@ -26,7 +26,7 @@ On top of that sits the social layer, which runs on the same match pipeline: pla
 | Tests | 88 test files, unit and Postgres integration, plus four suites that pin structure rather than behaviour |
 | Governance | GDPR pack in the repo: records of processing, risk assessment, breach procedure, two legitimate-interest assessments, a DPA register, and an erasure path that a test sweeps every column for |
 
-Built in eleven working days between 31 July and 11 August 2026, 116 commits, 13 production deploys. I wrote it with Claude Code as the pair, which is how I write most things now. The design decisions, the product rules and the mistakes below are mine.
+Built in eleven working days between 31 July and 11 August 2026: 116 commits, 13 production deploys.
 
 ## What was hard
 
@@ -47,5 +47,3 @@ Two lessons were paid for in production. Brevo drops mail sent from a subdomain 
 - [`docs/architecture.md`](docs/architecture.md) is the map: the request pipeline, the modules that own each rule, and why the API routes contain no logic.
 - [`excerpts/`](excerpts/) holds three production modules with their tests, copied verbatim and without a licence to reuse them.
 - [`brand/`](brand/) has the logo set.
-
-Mikkel Reymann Stephensen, Copenhagen.
