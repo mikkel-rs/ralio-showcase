@@ -6,6 +6,13 @@ Hitting-partner matchmaking for tennis clubs. It ran in production for a pilot c
 
 This repository is the public walkthrough. The product code is private because it held real members' data and I would rather not publish the operational half (runbook, hosting, secrets handling). If you want to read the code, ask, and I will give you access. Three of the modules are excerpted here as they are in production, tests included.
 
+<p align="center">
+<img src="screenshots/feed.png" width="19%" alt="Feed: your level, Up for a hit, suggestions">&nbsp;
+<img src="screenshots/tour.png" width="19%" alt="Tour standings">&nbsp;
+<img src="screenshots/match.png" width="19%" alt="A played match">&nbsp;
+<img src="screenshots/matches.png" width="19%" alt="Upcoming and past matches">
+</p>
+
 ## The problem
 
 Every tennis club has the same member: joined in spring, keen, plays at a level nobody in their circle plays at, and has nobody to hit with by June. Clubs answer with a WhatsApp group of 140 people and a noticeboard. Neither tells you who is free on Thursday at seven and is roughly your level.
